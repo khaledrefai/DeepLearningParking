@@ -221,8 +221,9 @@ def run_classifier(imgs):
     #log_preds = learn.predict_array(im[None])
     #pred = np.argmax(log_preds, axis=1)
     #image = skimage.io.imread(img)
-    print(len(imgs))
-    results = model.detect(imgs, verbose=1)
+    imgscopy = imgs.copy()
+    print(len(imgscopy))
+    results = model.detect(imgscopy, verbose=1)
     park_sts=[]
     imgs.clear()
     park_imgs.clear()
@@ -350,7 +351,6 @@ def gen():
                 park_img_ids.append(ind)
 
             park_sts = run_classifier(park_imgs)
-            del park_imgs
             park_imgs=[]
             index = 0
             while index < len(park_sts):
