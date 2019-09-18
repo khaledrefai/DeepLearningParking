@@ -120,7 +120,7 @@ dict =  {
         'motion_detection': False,
         'min_area_motion_contour': 500, # area given to detect motion
         'park_laplacian_th': 2.8,
-        'park_sec_to_wait': 1, # 4   wait time for changing the status of a region
+        'park_sec_to_wait': 4, # 4   wait time for changing the status of a region
         'start_frame': 1, # begin frame from specific frame number
         'show_ids': True, # shows id on each region
         'classifier_used': True,
@@ -156,7 +156,9 @@ class InferenceConfig(coco.CocoConfig):
     GPU_COUNT = 1
     NUM_CLASSES = 1 + 80
     DETECTION_MIN_CONFIDENCE = 0.1
-
+    IMAGE_RESIZE_MODE = "square"
+    IMAGE_MIN_DIM = 800
+    IMAGE_MAX_DIM = 1024
     #BACKBONE = "resnet50"
 config = InferenceConfig()
 config.display()
@@ -291,44 +293,50 @@ def gen():
     free_space_frames = 0
     count = 0
     parked_car_boxes = None
+    greenpoints=[]
+    redpoints=[]
+    last_pos=0
     global graph
     with graph.as_default():
         while (cap.isOpened()):
+            video_cur_pos = cap.get(cv2.CAP_PROP_POS_MSEC) / 1000.0
             ret, frame_initial = cap.read()
             if not ret:
                  break
             #frame_initial = frame_initial[:, :, ::-1]
             frame = cv2.resize(frame_initial, None, fx=0.6, fy=0.6)
+            if video_cur_pos - last_pos> dict['park_sec_to_wait'] or last_pos==0:
+                last_pos=video_cur_pos
+                results = model.detect([frame], verbose=0)
+                greenpoints.clear()
+                redpoints.clear()
+                # Mask R-CNN assumes we are running detection on multiple images.
+                # We only passed in one image to detect, so only grab the first result.
+                r = results[0]
 
-            results = model.detect([frame], verbose=0)
+                # The r variable will now have the results of detection:
+                # - r['rois'] are the bounding box of each detected object
+                # - r['class_ids'] are the class id (type) of each detected object
+                # - r['scores'] are the confidence scores for each detection
+                # - r['masks'] are the object masks for each detected object (which gives you the object outline)
+                #if parked_car_boxes is None:
+                    # This is the first frame of video - assume all the cars detected are in parking spaces.
+                    # Save the location of each car as a parking space box and go to the next frame of video.
+                #    parked_car_boxes = get_car_boxes(r['rois'], r['class_ids'])
 
-            # Mask R-CNN assumes we are running detection on multiple images.
-            # We only passed in one image to detect, so only grab the first result.
-            r = results[0]
-
-            # The r variable will now have the results of detection:
-            # - r['rois'] are the bounding box of each detected object
-            # - r['class_ids'] are the class id (type) of each detected object
-            # - r['scores'] are the confidence scores for each detection
-            # - r['masks'] are the object masks for each detected object (which gives you the object outline)
-            #if parked_car_boxes is None:
-                # This is the first frame of video - assume all the cars detected are in parking spaces.
-                # Save the location of each car as a parking space box and go to the next frame of video.
-            #    parked_car_boxes = get_car_boxes(r['rois'], r['class_ids'])
-
-            #else:
-                # Get where cars are currently located in the frame
-            car_boxes = get_car_boxes(r['rois'], r['class_ids'])
+                #else:
+                    # Get where cars are currently located in the frame
+                car_boxes = get_car_boxes(r['rois'], r['class_ids'])
 
 
-            # See how much those cars overlap with the known parking spaces
-            overlaps = utils.compute_overlaps(parking_yml_box, car_boxes)
+                # See how much those cars overlap with the known parking spaces
+                overlaps = utils.compute_overlaps(parking_yml_box, car_boxes)
 
-            # Assume no spaces are free until we find one that is free
-            free_space = False
+                # Assume no spaces are free until we find one that is free
+                free_space = False
 
-            # Loop through each known parking space box
-            for parking_area, overlap_areas,park in zip(parking_yml_box, overlaps,parking_data):
+                # Loop through each known parking space box
+                for parking_area, overlap_areas,park in zip(parking_yml_box, overlaps,parking_data):
 
                     # For this parking space, find the max amount it was covered by any
                     # car that was detected in our image (doesn't really matter which car)
@@ -345,6 +353,7 @@ def gen():
                         #cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                         cv2.drawContours(frame, [points], contourIdx=-1,
                                          color=(0, 255, 0), thickness=1, lineType=cv2.LINE_8)
+                        greenpoints.append(points)
                         # Flag that we have seen at least one open space
                         free_space = True
                         count+=1
@@ -353,31 +362,37 @@ def gen():
                         #cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 0, 255), 1)
                         cv2.drawContours(frame, [points], contourIdx=-1,
                                          color=(0, 0, 255), thickness=1, lineType=cv2.LINE_8)
+                        redpoints.append(points)
                     #print_parkIDs(park, points, frame)
                     # Write the IoU measurement inside the box
                     font = cv2.FONT_HERSHEY_DUPLEX
                     #cv2.putText(frame, f"{max_IoU_overlap:0.2}", (x1 + 6, y2 - 6), font, 0.3, (255, 255, 255))
-                    cv2.putText(frame, 'Total vacant ' + str(count-4) ,(5, 30),
-                                cv2.FONT_HERSHEY_DUPLEX,
-                                0.8, (255, 0, 0), 1, cv2.LINE_8)
+                    #cv2.putText(frame, 'Total vacant ' + str(count-4) ,(5, 30),
+                    #           cv2.FONT_HERSHEY_DUPLEX,
+                    #            0.8, (255, 0, 0), 1, cv2.LINE_8)
 
-            # If at least one space was free, start counting frames
-            # This is so we don't alert based on one frame of a spot being open.
-            # This helps prevent the script triggered on one bad detection.
-            if free_space:
-                free_space_frames += 1
+                    # If at least one space was free, start counting frames
+                    # This is so we don't alert based on one frame of a spot being open.
+                    # This helps prevent the script triggered on one bad detection.
+                    if free_space:
+                        free_space_frames += 1
+                    else:
+                        # If no spots are free, reset the count
+                        free_space_frames = 0
+
+                        # If a space has been free for several frames, we are pretty sure it is really free!
+                    if free_space_frames > 100:
+                        # Write SPACE AVAILABLE!! at the top of the screen
+                        font = cv2.FONT_HERSHEY_DUPLEX
+                        cv2.putText(frame, f"SPACE AVAILABLE!", (10, 150), font, 3.0, (0, 255, 0), 2, cv2.FILLED)
+
             else:
-                # If no spots are free, reset the count
-                free_space_frames = 0
+                cv2.drawContours(frame, greenpoints, contourIdx=-1,
+                                 color=(0, 255, 0), thickness=1, lineType=cv2.LINE_8)
+                cv2.drawContours(frame, redpoints, contourIdx=-1,
+                                 color=(0, 0, 255), thickness=1, lineType=cv2.LINE_8)
 
-                # If a space has been free for several frames, we are pretty sure it is really free!
-            if free_space_frames > 100:
-                # Write SPACE AVAILABLE!! at the top of the screen
-                font = cv2.FONT_HERSHEY_DUPLEX
-                cv2.putText(frame, f"SPACE AVAILABLE!", (10, 150), font, 3.0, (0, 255, 0), 2, cv2.FILLED)
-
-
-                # Show the frame of video on the screen
+            # Show the frame of video on the screen
             #         cv2.imshow('Video', frame)
             ret, jpeg = cv2.imencode('.jpg', frame)
             if jpeg is not None:
