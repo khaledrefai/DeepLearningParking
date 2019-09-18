@@ -7,7 +7,7 @@ stream = cv2.VideoCapture('camer1.webm')  # Open any video stream
 
 
 # change following IP address '192.168.1.xxx' with yours
-server = NetGear(address='35.202.184.158', port='20', protocol='tcp', pattern=0, receive_mode=False, logging=False)  # Define netgear server at your system IP address.
+server = NetGear(address='34.66.105.29', port='20', protocol='tcp', pattern=0, receive_mode=False, logging=False)  # Define netgear server at your system IP address.
 
 # infinite loop until [Ctrl+C] is pressed
 while True:

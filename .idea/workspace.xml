@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="643cf266-7d10-4040-9188-e1ed21309915" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client_video.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/parkingApi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/srv_video.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DeepLearningParkingSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepLearningParkingSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/srv_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv_video.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,11 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/srv_video.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+              <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
               <folding>
                 <element signature="e#19#52#0" expanded="true" />
               </folding>
@@ -111,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client_video.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
-              <caret line="204" column="26" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="40" />
+              <caret line="204" column="38" selection-start-line="204" selection-start-column="38" selection-end-line="204" selection-end-column="38" />
               <folding>
                 <element signature="e#19#52#0" expanded="true" />
                 <element signature="e#8467#9052#0" />
@@ -185,8 +180,8 @@
         <option value="$PROJECT_DIR$/parkingApi.py" />
         <option value="$PROJECT_DIR$/socker_srv.py" />
         <option value="$PROJECT_DIR$/socket_srv.py" />
-        <option value="$PROJECT_DIR$/client_video.py" />
         <option value="$PROJECT_DIR$/srv_video.py" />
+        <option value="$PROJECT_DIR$/client_video.py" />
       </list>
     </option>
   </component>
@@ -555,25 +550,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srv_video.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+          <folding>
+            <element signature="e#19#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client_video.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
-          <caret line="204" column="26" selection-start-line="204" selection-start-column="26" selection-end-line="204" selection-end-column="40" />
+          <caret line="204" column="38" selection-start-line="204" selection-start-column="38" selection-end-line="204" selection-end-column="38" />
           <folding>
             <element signature="e#19#52#0" expanded="true" />
             <element signature="e#8467#9052#0" />
             <element signature="e#9118#10728#1" />
             <element signature="e#10920#13420#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srv_video.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="e#19#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
