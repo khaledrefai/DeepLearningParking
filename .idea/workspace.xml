@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="643cf266-7d10-4040-9188-e1ed21309915" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkingApi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkingApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="387" column="62" selection-start-line="387" selection-start-column="62" selection-end-line="387" selection-end-column="62" />
+            <state relative-caret-position="359">
+              <caret line="354" column="12" lean-forward="true" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#676#772#0" />
@@ -105,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>save_video</find>
       <find>fn_out</find>
       <find>change_pos</find>
       <find>out</find>
@@ -135,6 +133,7 @@
       <find>run_classifier</find>
       <find>append</find>
       <find>park_imgs</find>
+      <find>parking_data</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -389,7 +388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568804483385</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change port">
+      <created>1568804720863</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568804720863</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,7 +442,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="clear imgs" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear imgs" />
+    <MESSAGE value="change port" />
+    <option name="LAST_COMMIT_MESSAGE" value="change port" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,8 +611,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parkingApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="387" column="62" selection-start-line="387" selection-start-column="62" selection-end-line="387" selection-end-column="62" />
+        <state relative-caret-position="359">
+          <caret line="354" column="12" lean-forward="true" selection-start-line="354" selection-start-column="12" selection-end-line="354" selection-end-column="12" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
             <element signature="e#676#772#0" />
