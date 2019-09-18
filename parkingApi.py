@@ -352,7 +352,6 @@ def gen():
             park_sts = run_classifier(park_imgs)
             del park_imgs
             park_imgs=[]
-
             index = 0
             while index < len(park_sts):
                 id = park_img_ids[index]
