@@ -224,6 +224,7 @@ def run_classifier(imgs):
     print(len(imgs))
     results = model.detect(imgs, verbose=1)
     park_sts=[]
+    park_imgs.clear()
     for res in results:
         print(res['class_ids'])
         if 1 in  res['class_ids'] or res['class_ids'].size ==0:
