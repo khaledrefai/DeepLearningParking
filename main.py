@@ -254,7 +254,7 @@ while (cap.isOpened()):
             delta = np.mean(np.abs(laplacian * parking_mask[ind]))
             # if(delta<2.5):
             # print("ind, del", ind, delta)
-            status = delta < dict['park_laplacian_th']
+            status = delta < dict['park_laplacian_th']mrcnn
             # If detected a change in parking status, save the current time
             if status != parking_status[ind] and parking_buffer[ind] == None:
                 parking_buffer[ind] = video_cur_pos
