@@ -73,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkingApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="352" column="29" selection-start-line="352" selection-start-column="29" selection-end-line="352" selection-end-column="29" />
+            <state relative-caret-position="393">
+              <caret line="387" column="62" selection-start-line="387" selection-start-column="62" selection-end-line="387" selection-end-column="62" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#676#772#0" />
@@ -105,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>visualize</find>
       <find>save_video</find>
       <find>fn_out</find>
       <find>change_pos</find>
@@ -133,8 +132,9 @@
       <find>fn</find>
       <find>cap</find>
       <find>video_feed</find>
-      <find>park_imgs</find>
       <find>run_classifier</find>
+      <find>append</find>
+      <find>park_imgs</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -375,7 +375,21 @@
       <option name="project" value="LOCAL" />
       <updated>1568803664664</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="clear imgs">
+      <created>1568804048936</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568804048936</updated>
+    </task>
+    <task id="LOCAL-00003" summary="clear imgs">
+      <created>1568804483385</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1568804483385</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -590,8 +604,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parkingApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="352" column="29" selection-start-line="352" selection-start-column="29" selection-end-line="352" selection-end-column="29" />
+        <state relative-caret-position="393">
+          <caret line="387" column="62" selection-start-line="387" selection-start-column="62" selection-end-line="387" selection-end-column="62" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
             <element signature="e#676#772#0" />
