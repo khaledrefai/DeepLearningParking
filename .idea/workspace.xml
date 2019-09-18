@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="643cf266-7d10-4040-9188-e1ed21309915" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_video.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parkingApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkingApi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkingApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
+            <state relative-caret-position="206">
+              <caret line="352" column="29" selection-start-line="352" selection-start-column="29" selection-end-line="352" selection-end-column="29" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
                 <element signature="e#676#772#0" />
@@ -106,7 +105,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>make_vide</find>
       <find>visualize</find>
       <find>save_video</find>
       <find>fn_out</find>
@@ -125,7 +123,6 @@
       <find>model</find>
       <find>park_sts</find>
       <find>points</find>
-      <find>run_classifier</find>
       <find>فاق</find>
       <find>BATCH_SIZE</find>
       <find>BATCH_S</find>
@@ -136,6 +133,8 @@
       <find>fn</find>
       <find>cap</find>
       <find>video_feed</find>
+      <find>park_imgs</find>
+      <find>run_classifier</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -369,6 +368,14 @@
       <option name="presentableId" value="Default" />
       <updated>1568610752110</updated>
     </task>
+    <task id="LOCAL-00001" summary="clear imgs">
+      <created>1568803664664</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568803664664</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -412,6 +419,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="clear imgs" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear imgs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -579,8 +590,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parkingApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
+        <state relative-caret-position="206">
+          <caret line="352" column="29" selection-start-line="352" selection-start-column="29" selection-end-line="352" selection-end-column="29" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
             <element signature="e#676#772#0" />
