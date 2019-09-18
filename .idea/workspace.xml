@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="643cf266-7d10-4040-9188-e1ed21309915" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/client_video.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srv_video.py" beforeDir="false" afterPath="$PROJECT_DIR$/srv_video.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parkingApi.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkingApi.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,18 +14,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VideoShow.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="e#39#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CameraReader.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -52,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VideoGet.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
+            <state relative-caret-position="366">
               <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
             </state>
           </provider>
@@ -61,7 +50,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createPoints.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="187">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="e#229#239#0" expanded="true" />
@@ -73,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="328" column="20" selection-start-line="213" selection-start-column="3" selection-end-line="328" selection-end-column="20" />
+            <state relative-caret-position="570">
+              <caret line="281" column="93" selection-start-line="276" selection-start-column="8" selection-end-line="281" selection-end-column="93" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -82,41 +71,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkingApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="241" column="4" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+            <state relative-caret-position="448">
+              <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
+                <element signature="e#676#772#0" />
+                <element signature="e#823#919#0" />
+                <element signature="e#967#1036#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/srv_video.py">
+        <entry file="file://$PROJECT_DIR$/templates/camera.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="26" />
-              <folding>
-                <element signature="e#19#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client_video.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="330" column="1" selection-start-line="330" selection-start-column="1" selection-end-line="330" selection-end-column="1" />
-              <folding>
-                <element signature="e#19#52#0" expanded="true" />
-                <element signature="e#8467#9052#0" />
-                <element signature="e#9118#10728#1" />
-                <element signature="e#10920#13420#0" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="53" column="41" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -132,12 +106,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>config</find>
-      <find>IMAGE_SHAPE</find>
-      <find>InferenceConfig</find>
-      <find>CocoConfig</find>
-      <find>images</find>
-      <find>make_video</find>
       <find>make_vide</find>
       <find>visualize</find>
       <find>save_video</find>
@@ -161,7 +129,13 @@
       <find>فاق</find>
       <find>BATCH_SIZE</find>
       <find>BATCH_S</find>
+      <find>tempfile</find>
+      <find>feet</find>
+      <find>feed</find>
       <find>frame_out</find>
+      <find>fn</find>
+      <find>cap</find>
+      <find>video_feed</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,11 +151,11 @@
         <option value="$PROJECT_DIR$/SaveImage.py" />
         <option value="$PROJECT_DIR$/createPoints.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/parkingApi.py" />
         <option value="$PROJECT_DIR$/socker_srv.py" />
         <option value="$PROJECT_DIR$/socket_srv.py" />
         <option value="$PROJECT_DIR$/srv_video.py" />
         <option value="$PROJECT_DIR$/client_video.py" />
+        <option value="$PROJECT_DIR$/parkingApi.py" />
       </list>
     </option>
   </component>
@@ -202,6 +176,11 @@
             <path>
               <item name="DeepLearningParking" type="b2602c69:ProjectViewProjectNode" />
               <item name="DeepLearningParking" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DeepLearningParking" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DeepLearningParking" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -235,7 +214,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.srv_video">
+  <component name="RunManager" selected="Python.parkingApi">
     <configuration name="CameraReader" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearningParkingSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,7 +299,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mask_rcnn_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="parkingApi" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DeepLearningParkingSystem" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -329,10 +308,10 @@
       </envs>
       <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\envs\PYTHON3.6\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mask_rcnn_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/parkingApi.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -364,18 +343,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.main" />
-      <item itemvalue="Python.mask_rcnn_test" />
       <item itemvalue="Python.createPoints" />
       <item itemvalue="Python.CameraReader" />
       <item itemvalue="Python.srv_video" />
+      <item itemvalue="Python.parkingApi" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.parkingApi" />
         <item itemvalue="Python.srv_video" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.createPoints" />
         <item itemvalue="Python.CameraReader" />
-        <item itemvalue="Python.mask_rcnn_test" />
       </list>
     </recent_temporary>
   </component>
@@ -401,7 +380,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32792208" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3008658" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -415,12 +394,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1869455" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18651211" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32839838" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17099567" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -503,23 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VideoGet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createPoints.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#229#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/socker_srv.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -530,45 +492,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/parkingApi.py">
+    <entry file="file://$PROJECT_DIR$/client_video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="241" column="4" selection-start-line="241" selection-start-column="4" selection-end-line="241" selection-end-column="4" />
+        <state relative-caret-position="420">
+          <caret line="235" column="53" lean-forward="true" selection-start-line="235" selection-start-column="53" selection-end-line="235" selection-end-column="53" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="328" column="20" selection-start-line="213" selection-start-column="3" selection-end-line="328" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#19#52#0" expanded="true" />
+            <element signature="e#8467#9052#0" />
+            <element signature="e#9118#10728#1" />
+            <element signature="e#10920#13420#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srv_video.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
           <folding>
             <element signature="e#19#52#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client_video.py">
+    <entry file="file://$PROJECT_DIR$/templates/Object.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="330" column="1" selection-start-line="330" selection-start-column="1" selection-end-line="330" selection-end-column="1" />
+        <state relative-caret-position="173">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="102" column="35" lean-forward="true" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Face.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VideoGet.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createPoints.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
-            <element signature="e#19#52#0" expanded="true" />
-            <element signature="e#8467#9052#0" />
-            <element signature="e#9118#10728#1" />
-            <element signature="e#10920#13420#0" />
+            <element signature="e#229#239#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="281" column="93" selection-start-line="276" selection-start-column="8" selection-end-line="281" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/camera.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parkingApi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="388" lean-forward="true" selection-start-line="388" selection-end-line="388" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#676#772#0" />
+            <element signature="e#823#919#0" />
+            <element signature="e#967#1036#0" />
           </folding>
         </state>
       </provider>

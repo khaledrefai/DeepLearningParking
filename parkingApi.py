@@ -12,6 +12,10 @@ import math
 import numpy as np
 import skimage.io
 import matplotlib.pyplot as plt
+import tempfile
+from os import path
+import logging
+import tensorflow as tf
 
 
 
@@ -21,10 +25,85 @@ app.config['TEMPLATES_AUTO_RELOAD'] = True
 min_threshold = 0.5
 model_file = 'temp/checkpoints/initial-model.h5'
 image_dir = 'tests/images'
-
+graph = tf.get_default_graph()
 
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
+
+
+
+
+@app.route('/video_feed')
+def video_feed():
+    return Response(gen(),
+                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+
+@app.errorhandler(400)
+def bad_request(e):
+    return jsonify({"status": "not ok", "message": "this server could not understand your request"})
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return jsonify({"status": "not found", "message": "route not found"})
+
+
+@app.errorhandler(500)
+def not_found(e):
+    return jsonify({"status": "internal error", "message": "internal error occurred in server"})
+
+
+@app.route('/')
+def index():
+    return render_template('camera.html')
+
+
+@app.route('/camera.html')
+def Motion():
+    return render_template('camera.html')
+
+
+@app.route('/Dashboard.html')
+def home():
+    return render_template('Dashboard.html')
+
+
+@app.route('/fonts/<path:path>')
+def send_f(path):
+    return send_from_directory('fonts', path)
+
+
+@app.route('/bootstrap/<path:path>')
+def send_b(path):
+    return send_from_directory('bootstrap', path)
+
+
+@app.route('/css/<path:path>')
+def send_css(path):
+    return send_from_directory('css', path)
+
+
+@app.route('/web-analytics/<path:path>')
+def send_w(path):
+    return send_from_directory('web-analytics', path)
+
+
+@app.route('/jquery/<path:path>')
+def send_js(path):
+    return send_from_directory('jquery', path)
+
+
+@app.route('/tether/<path:path>')
+def send_t(path):
+    return send_from_directory('tether', path)
+
+
+@app.route('/<path:path>')
+def get_file(path):
+    return send_from_directory('', path)
+
 
 # Import Mask RCNN
 sys.path.append(ROOT_DIR)  # To find local version of the library
@@ -47,7 +126,7 @@ import pdb
 
 
 # path references
-fn = "camer1.webm" #3
+
 fn_yaml = "main_park_points - Copy.yml"
 fn_out =  "outputvideo_01.avi"
 global_str = "Last change at: "
@@ -67,8 +146,11 @@ dict =  {
         'save_video': True
         }
 
-# Set from video
+
+fn = "camer1.webm"  # 3
 cap = cv2.VideoCapture(fn)
+# Set from video
+
 video_info = {  'fps':    cap.get(cv2.CAP_PROP_FPS),
                 'width':  int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)*0.6),
                 'height': int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)*0.6),
@@ -210,11 +292,11 @@ def postimage():
             tmp = tempfile.TemporaryDirectory()
             temp_storage = path.join(tmp.name, file.filename)
             file.save(temp_storage)
-            image = cv2.imread(temp_storage)
+            frame = cv2.imread(temp_storage)
             frame_out = frame.copy()
             color = (0, 255, 0)
             rect = parking_bounding_rects[ind]
-            roi_gray_ov = image[rect[1]:(rect[1] + rect[3]),
+            roi_gray_ov = frame[rect[1]:(rect[1] + rect[3]),
                           rect[0]:(rect[0] + rect[2])]  # crop roi for faster calcluation
 
             park_imgs.append(roi_gray_ov)
@@ -245,8 +327,45 @@ def postimage():
 
 
 def gen():
-        ret, jpeg = cv2.imencode('.jpg', frame_out)
-        if jpeg is not None:
+    global graph
+    with graph.as_default():
+        while (cap.isOpened()):
+            ret, frame_initial = cap.read()
+            if not ret:
+                 break
+            frame = cv2.resize(frame_initial, None, fx=0.6, fy=0.6)
+            # Background Subtraction
+            frame_blur = cv2.GaussianBlur(frame.copy(), (5, 5), 3)
+            # frame_blur = frame_blur[150:1000, 100:1800]
+            frame_gray = cv2.cvtColor(frame_blur, cv2.COLOR_BGR2GRAY)
+            frame_out = frame.copy()
+            for ind, park in enumerate(parking_data):
+                rect = parking_bounding_rects[ind]
+                roi_gray_ov = frame[rect[1]:(rect[1] + rect[3]),
+                              rect[0]:(rect[0] + rect[2])]  # crop roi for faster calcluation
+
+                park_imgs.append(roi_gray_ov)
+                park_img_ids.append(ind)
+
+            park_sts = run_classifier(park_imgs)
+            index = 0
+            while index < len(park_sts):
+                id = park_img_ids[index]
+                park = parking_data[id]
+                points = np.array(park['points'])
+                color = (0, 255, 0)
+                if park_sts[index]:
+                    color = (0, 0, 255)
+                cv2.drawContours(frame_out, [points], contourIdx=-1,
+                                 color=color, thickness=2, lineType=cv2.LINE_8)
+                if dict['show_ids']:
+                    print_parkIDs(park, points, frame_out)
+                index += 1
+            park_imgs.clear()
+            park_img_ids.clear()
+            park_sts.clear()
+            ret, jpeg = cv2.imencode('.jpg', frame_out)
+            if jpeg is not None:
                 yield (b'--frame\r\n'
                        b'Content-Type: image/jpeg\r\n\r\n' + jpeg.tobytes() + b'\r\n')
             else:
@@ -254,18 +373,16 @@ def gen():
 
 
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
 
 
 if __name__ == "__main__":
     with app.app_context():
         log = logging.getLogger('werkzeug')
         log.setLevel(logging.ERROR)
-        print("Starting server on http://localhost:2000")
-        print("Serving ...", app.run(host='0.0.0.0', port=2000))
+        print("Starting server on http://localhost:8080")
+        print("Serving ...", app.run(host='0.0.0.0', port=8080))
         print("Finished !")
         print("Done !")
 

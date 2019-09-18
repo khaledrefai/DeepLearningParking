@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Material Design Bootstrap</title>
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <!-- Your custom styles (optional) -->
+        <link href="css/style.min.css" rel="stylesheet">
+		
+        <style>
+         .map-container{
+                overflow:hidden;
+                padding-bottom:56.25%;
+                position:relative;
+                height:0;
+            }
+            .map-container iframe{
+                left:0;
+                top:0;
+                height:100%;
+                width:100%;
+                position:absolute;
+            }
+
+        </style>
+    </head>
+
+    <body class="grey lighten-3">
+
+        <!--Main Navigation-->
+        <header>
+
+        
+            <!-- Navbar -->
+
+            <!-- Sidebar -->
+            <div class="sidebar-fixed position-fixed">
+
+                <a class="  waves-effect">
+                    <img src="img/logo.PNG" class="img-fluid" alt="">
+                </a>
+
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item active waves-effect">
+                        <i class="fas fa-chart-pie mr-3"></i>Dashboard</a>
+                </div>
+                     <div>
+                 <span  style=" color:#0072CC;" >
+                     <ul >Face Recognition include:   </ul> </span>
+                        <span style="color:#808080;" > <p><i>1-Name Detection.</i> </p></span>
+                        <span style="color:#808080;" > <p><i>2-age Detection.</i></p> </span>
+                         <span style="color:#808080;" ><p> <i>3-Gender Detection.</i> </p></span>
+                         <span style="color:#808080;" > <p><i>4-Emotion Detection.</i> </p></span>
+                        </div>
+                 <div >
+                     <span style="color:#0072CC;" >  <ul>Crowd Insight include:   </ul> </span>
+                      <span style="color:#808080;" > <p><i>1-People Count.</i> </p></span>
+
+
+                </div>
+            </div>  
+            <!-- Sidebar -->
+
+        </header>
+        <!--Main Navigation-->
+
+        <!--Main layout-->
+        <main class="pt-5 mx-lg-5">
+            <div class="container-fluid mt-5">
+
+                <!-- Heading -->
+                <div class="card mb-4 wow fadeIn">
+
+                    <!--Card content-->
+                    <div class="card-body ">
+
+                        <h4 class="mb-2 mb-sm-0 pt-1" >
+                            <a href="https://mdbootstrap.com/docs/jquery/" target="_blank" ></a>
+                            <span></span>
+                            <span style="color:#0072CC;text-align:center;"> <p>Face Recognition System</p> </span>
+                        </h4>
+
+                  
+                    </div>
+
+                </div>
+           
+                <div class="row wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-md-9 mb-4">
+
+					
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                               <div id="myDiv"></div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+						
+                        <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                               <div id="myDiv1"></div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+
+						      <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                               <div id="myDiv2"></div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+						
+						      <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                               <div id="myDiv3"></div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+						      <!--Card-->
+                        <div class="card">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                               <div id="myDiv4"></div>
+
+                            </div>
+
+                        </div>
+                        <!--/.Card-->
+						
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-3 mb-4">
+
+
+                        <!--Card-->
+                        <div class="card mb-4">
+
+                            <!--Card content-->
+                            <div class="card-body">
+
+                                <!-- List group links -->
+                                <div class="list-group list-group-flush">
+                                    <p style="color:#0072CC;text-align:center;">Total number of Employee</p>
+                                    <img src="img/images.jpg" alt="EmployeeNumber">
+
+                                    <div ><input id="total" name="Total" type="text" value="0" size="34" style="color: #808080;text-align:center;"/></div>
+                                </div>
+								<div class="list-group list-group-flush">
+                                    <p style=" color:#0072CC;text-align:center;">Total number of Women</p>
+                                    <img src="img/w.jpg" alt="women">
+
+                                    <div style="text-align: center"><input id="totalwomen" name="totalwomen" type="text" value="0"  style="color: #808080;text-align:center;"/></div>
+                                </div>
+								<div class="list-group list-group-flush">
+                                    <p style=" color:#0072CC;text-align:center;">Total number of Men</p>
+                                    <img src="img/k.GIF" alt="men">
+
+                                    <div style="text-align: center"><input id="totalmen" name="totalmen" type="text" value="0"  style="color: #808080;text-align:center;" /></div>
+                                </div>
+                                <!-- List group links -->
+
+                            </div>
+						</div>
+                        </div>
+                        <!--/.Card-->
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+
+
+            </div>
+        </main>
+        <!--Main layout-->
+
+        <!--Footer-->
+        <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+
+            <hr class="my-4">
+
+            <!-- Social icons -->
+            <div class="pb-4">
+               
+
+                <a href="https://www.linkedin.com/company/master-works/" target="_blank">
+                    <i class="fab fa-linkedin mr-3"></i>
+                </a>
+
+            
+            </div>
+            <!-- Social icons -->
+
+            <!--Copyright-->
+            <div class="footer-copyright py-3">
+                © 2019 Copyright:
+                <a href="http://www.master-works.net/mw/" target="_blank"> master-works.com </a>
+            </div>
+            <!--/.Copyright-->
+
+        </footer>
+        <!--/.Footer-->
+
+        <!-- SCRIPTS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        <!-- Initializations -->
+        <script type="text/javascript">
+            // Animations initialization
+            new WOW().init();
+
+        </script>
+
+  
+
+        <!--Google Maps-->
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script>
+            setInterval(function(){ loadData(); }, 3000);
+            function loadData()
+            {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function()
+                {
+                    if (xhr.readyState == 4 && xhr.status == 200)
+                    {
+                       
+						 var trace1 = {
+                            x: [],
+                            y: [],
+                            mode: 'markers',
+                            type: 'scatter',
+                            name: 'camera1',
+                            text: [],
+                            marker: {size: 12}
+                        };
+						 var trace2 = {
+                            x: [],
+                            y: [],
+                            mode: 'markers',
+                            type: 'scatter',
+                            name: 'camera1',
+                            text: [],
+                            marker: {size: 12}
+                        };
+						 var trace3 = {
+                            x: [],
+                            y: [],
+                            mode: 'markers',
+                            type: 'scatter',
+                            name: 'camera1',
+                            text: [],
+                            marker: {size: 12}
+                        };
+						 var trace4 = {
+                            x: [],
+                            y: [],
+                            mode: 'markers',
+                            type: 'scatter',
+                            name: 'camera1',
+                            text: [],
+                            marker: {size: 12}
+                        };
+                        var arrData = new Array();
+                        var jsonObj = xhr.responseText.split(/\r?\n|\r/);
+                         document.getElementById("totalwomen").value =0;
+                          document.getElementById("totalmen").value =0;
+                        for (var i = 1; i < jsonObj.length-2; i++)
+                        {
+                            var arr=jsonObj[i].split(',');
+                            trace1.x.push(arr[4]);
+                            trace1.y.push(arr[1]);
+                            trace1.text.push(arr[1]);
+							
+							trace2.x.push(arr[4]);
+                            trace2.y.push(arr[2]);
+                            trace2.text.push(arr[2]);
+							console.log(arr[2])
+							 if (arr[2].trim() == "'F'")
+							 document.getElementById("totalwomen").value =  parseInt(document.getElementById("totalwomen").value)+1;
+							 if (arr[2].trim() == "'M'")
+							  document.getElementById("totalmen").value = parseInt(document.getElementById("totalmen").value)+1;
+							trace3.x.push(arr[4]);
+                            trace3.y.push(arr[3]);
+                            trace3.text.push(arr[3]);
+							
+						
+                        }
+                        var data1 = [trace1];
+                        var layout1 = {
+                            xaxis: {
+                                range: [jsonObj[0][4], jsonObj[jsonObj.length - 3][4]]
+                            },
+                            yaxis:
+                            {
+                                range: [1, 99]
+                            },
+                            title: ' Age insights'
+                        };
+                        Plotly.newPlot('myDiv1', data1, layout1, {showSendToCloud: false});
+						
+						
+						  var data2 = [trace2];
+                        var layout2 = {
+                            xaxis: {
+                                range: [jsonObj[0][4], jsonObj[jsonObj.length - 3][4]]
+                            },
+                            yaxis:
+                            {
+                              //  range: ['M','F'],
+								type : "category"
+                            },
+                            title: 'Gender insights'
+                        };
+                        Plotly.newPlot('myDiv2', data2, layout2, {showSendToCloud: false});
+						
+						
+						  var data3 = [trace3];
+                        var layout3 = {
+                            xaxis: {
+                                range: [jsonObj[0][4], jsonObj[jsonObj.length - 3][4]]
+                            },
+                            yaxis:
+                            {
+                            //    range: ['angry','surprise','neutral','sad','happy','fear'],
+								type : "category"
+                            },
+                            title: 'Emotion insights'
+                        };
+                        Plotly.newPlot('myDiv3', data3, layout3, {showSendToCloud: false});
+						
+						
+                    }
+                };
+                xhr.open('GET', 'attendance.csv?randx=Math.random() * 10');
+                xhr.send();
+            }
+        </script>
+		<script>
+            setInterval(function(){ loadData1(); }, 3000);
+            function loadData1()
+            {
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function()
+                {
+                    if (xhr.readyState == 4 && xhr.status == 200)
+                    {
+                        var trace = {
+                            x: [],
+                            y: [],
+                            mode: 'markers',
+                            type: 'scatter',
+                            name: 'camera1',
+                            text: [],
+                            marker: {size: 12}
+                        };
+                        var arrData = new Array();
+                        var jsonObj = xhr.responseText.split(/\r?\n|\r/);
+                        for (var i = 1; i < jsonObj.length-1; i++)
+                        {
+                            var arr=jsonObj[i].split(',');
+                            trace.x.push(arr[1]);
+                            trace.y.push(arr[0]);
+                            trace.text.push(arr[0]);
+                            var d=jsonObj.length - 2;
+                            if (i ==(d) ){
+                            document.getElementById("total").value = arr[0];
+
+                            if (arr[0] == 5) {
+                                document.getElementById("total").style.backgroundColor = 'orange';
+                               // alert("There is too many people!");
+                            }
+                        }
+                        }
+                        var data = [trace];
+                        var layout = {
+                            xaxis: {
+                                range: [jsonObj[0][0], jsonObj[jsonObj.length - 3][0]]
+                            },
+                            yaxis:
+                            {
+                                range: [0, 8]
+                            },
+                            title: 'Crowd insights'
+                        };
+                        Plotly.newPlot('myDiv', data, layout, {showSendToCloud: true});
+                    }
+                };
+                xhr.open('GET', 'peopleCount.csv?randx=Math.random() * 10');
+                xhr.send();
+            }
+        </script>
+<script>
+
+var cvs = document.getElementById('canvas');
+/*var ctx = cvs.getContext('2d');
+ctx.lineWidth = 23;
+ctx.textAlign = 'center';
+ctx.textBaseline = 'middle';
+ctx.font = '25px Trebuchet MS';
+ctx.fillStyle = 'blue';
+
+var draw = (function () {
+    var start = 1.5 * Math.PI; 
+    var end = (2 * Math.PI) / 100; 
+
+    return function (r, p, c) {
+        p = p || 100; 
+        ctx.strokeStyle = c;
+        ctx.beginPath();
+        ctx.arc(175, 175, r, start, p * end + start, false);
+        ctx.stroke();
+    };
+}());
+
+var clock = function () {
+    requestAnimationFrame(clock);
+
+    var date = new Date;
+    var h = date.getHours();
+    var m = date.getMinutes();
+    var s = date.getSeconds();
+    var hp = 100 / 12 * (h % 12);
+    var mp = 100 / 60 * m;
+    var sp = 100 / 60 * s;
+    h = h < 10 ? '0' + h : h;
+    m = m < 10 ? '0' + m : m;
+    s = s < 10 ? '0' + s : s;
+
+    ctx.clearRect(0, 0, 350, 350);
+    ctx.fillText(h + ':' + m + ':' + s, 175, 175);
+    draw(75, hp, 'orange');
+    draw(100, mp, 'limegreen');
+    draw(125, sp, '#3399ff');
+};
+
+clock();
+clock()
+*/
+</script>
+
+
+
+    </body>
+
+</html>

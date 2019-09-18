@@ -204,6 +204,7 @@ def print_parkIDs(park, coor_points, frame_rev):
 # change following IP address '192.168.1.xxx' with yours
 client = NetGear(address='34.66.105.29', port='20', protocol='tcp', pattern=0, receive_mode=True,
                  logging=True)  # Define netgear client at Server IP address.
+
 server = NetGear(address='34.66.105.29', port='20', protocol='tcp', pattern=0, receive_mode=False, logging=False)
 
 # infinite loop
