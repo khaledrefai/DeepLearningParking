@@ -384,8 +384,8 @@ if __name__ == "__main__":
     with app.app_context():
         log = logging.getLogger('werkzeug')
         log.setLevel(logging.ERROR)
-        print("Starting server on http://localhost:8080")
-        print("Serving ...", app.run(host='0.0.0.0', port=8080))
+        print("Starting server on http://localhost:80")
+        print("Serving ...", app.run(host='0.0.0.0', port=80))
         print("Finished !")
         print("Done !")
 
