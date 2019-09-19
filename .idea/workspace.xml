@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="643cf266-7d10-4040-9188-e1ed21309915" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/DeepLearningParkingSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DeepLearningParkingSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parkingApi2.py" beforeDir="false" afterPath="$PROJECT_DIR$/parkingApi2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="3298">
               <caret line="204" column="61" selection-start-line="204" selection-start-column="3" selection-end-line="204" selection-end-column="61" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -77,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/parkingApi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="4301">
               <caret line="270" column="18" selection-start-line="270" selection-start-column="4" selection-end-line="270" selection-end-column="18" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
@@ -89,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/parkingApi2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="311" column="33" selection-start-line="311" selection-start-column="33" selection-end-line="311" selection-end-column="33" />
+            <state relative-caret-position="425">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
               <folding>
                 <element signature="e#0#63#0" expanded="true" />
               </folding>
@@ -185,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -197,6 +191,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,9 +347,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.parkingApi2" />
       <item itemvalue="Python.createPoints" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.parkingApi2" />
       <item itemvalue="Python.parkingApi" />
       <item itemvalue="Python.srv_video" />
     </list>
@@ -439,7 +434,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3001346" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3001346" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -644,16 +639,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/camera.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="41" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="3298">
           <caret line="204" column="61" selection-start-line="204" selection-start-column="3" selection-end-line="204" selection-end-column="61" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -663,7 +651,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/parkingApi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="4301">
           <caret line="270" column="18" selection-start-line="270" selection-start-column="4" selection-end-line="270" selection-end-column="18" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
@@ -671,10 +659,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/camera.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/parkingApi2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="311" column="33" selection-start-line="311" selection-start-column="33" selection-end-line="311" selection-end-column="33" />
+        <state relative-caret-position="425">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
           <folding>
             <element signature="e#0#63#0" expanded="true" />
           </folding>

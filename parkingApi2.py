@@ -24,9 +24,6 @@ app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 min_threshold = 0.5
 graph = tf.get_default_graph()
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-config.gpu_options.per_process_gpu_memory_fraction = 0.9
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
 
