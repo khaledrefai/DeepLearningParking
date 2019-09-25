@@ -117,7 +117,7 @@ dict =  {
         'motion_detection': False,
         'min_area_motion_contour': 500, # area given to detect motion
         'park_laplacian_th': 2.8,
-        'park_sec_to_wait': 4, # 4   wait time for changing the status of a region
+        'park_sec_to_wait': 3, # 4   wait time for changing the status of a region
         'start_frame': 1, # begin frame from specific frame number
         'show_ids': True, # shows id on each region
         'classifier_used': True,
