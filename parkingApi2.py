@@ -172,21 +172,8 @@ data = ImageClassifierData.from_paths(PATH, tfms=tfms_from_model(arch, sz))
 learn = ConvLearner.pretrained(arch, data, precompute=False)
 trn_tfms, val_tfms = tfms_from_model(arch,sz) # get transformations
 '''
-class_names = ['BG', 'person', 'bicycle', 'car', 'motorcycle', 'airplane',
-               'bus', 'train', 'truck', 'boat', 'traffic light',
-               'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird',
-               'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear',
-               'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie',
-               'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball',
-               'kite', 'baseball bat', 'baseball glove', 'skateboard',
-               'surfboard', 'tennis racket', 'bottle', 'wine glass', 'cup',
-               'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple',
-               'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza',
-               'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed',
-               'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote',
-               'keyboard', 'cell phone', 'microwave', 'oven', 'toaster',
-               'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors',
-               'teddy bear', 'hair drier', 'toothbrush']
+
+
 
 def run_classifier(imgs):
     #im = val_tfms(img)
@@ -341,7 +328,7 @@ def gen():
                     ind = park['id']
                     # Check if the parking space is occupied by seeing if any car overlaps
                     # it by more than 0.15 using IoU
-                    if max_IoU_overlap < 0.20 and  ind not in (11,18,19,26):
+                    if max_IoU_overlap < 0.20 : #and  ind not in (11,18,19,26)
                         # Parking space not occupied! Draw a green box around it
                         #cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                         cv2.drawContours(frame, [points], contourIdx=-1,
