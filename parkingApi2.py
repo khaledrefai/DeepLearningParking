@@ -142,7 +142,7 @@ cap.set(cv2.CAP_PROP_POS_FRAMES, dict['start_frame']) # jump to frame number spe
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
 
 # Local path to trained weights file
-COCO_MODEL_PATH = "mask_rcnn_coco.h5"
+COCO_MODEL_PATH = "mask_rcnn_cars.h5"
 frame_out =None
 
 
@@ -151,11 +151,7 @@ class InferenceConfig(coco.CocoConfig):
     # one image at a time. Batch size = GPU_COUNT * IMAGES_PER_GPU
     IMAGES_PER_GPU = 1
     GPU_COUNT = 1
-    NUM_CLASSES = 1 + 80
-    DETECTION_MIN_CONFIDENCE = 0.1
-    IMAGE_RESIZE_MODE = "square"
-    IMAGE_MIN_DIM = 800
-    IMAGE_MAX_DIM = 1024
+    NUM_CLASSES = 1 + 1
     #BACKBONE = "resnet50"
 config = InferenceConfig()
 config.display()
@@ -271,7 +267,7 @@ def get_car_boxes(boxes, class_ids):
 
     for i, box in enumerate(boxes):
         print(class_ids[i])
-        if class_ids[i] in [3, 8, 6,29,68]:
+        if class_ids[i] in [1]:
             car_boxes.append(box)
 
     return np.array(car_boxes)
@@ -345,7 +341,7 @@ def gen():
                     ind = park['id']
                     # Check if the parking space is occupied by seeing if any car overlaps
                     # it by more than 0.15 using IoU
-                    if max_IoU_overlap < 0.20 and  ind not in (11,18,19,26):
+                    if max_IoU_overlap < 0.20 : #and  ind not in (11,18,19,26)
                         # Parking space not occupied! Draw a green box around it
                         #cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 3)
                         cv2.drawContours(frame, [points], contourIdx=-1,

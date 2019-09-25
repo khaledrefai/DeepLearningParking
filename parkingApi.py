@@ -26,9 +26,7 @@ min_threshold = 0.5
 model_file = 'temp/checkpoints/initial-model.h5'
 image_dir = 'tests/images'
 graph = tf.get_default_graph()
-config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
-config.gpu_options.per_process_gpu_memory_fraction = 0.9
+
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
 
@@ -166,7 +164,7 @@ cap.set(cv2.CAP_PROP_POS_FRAMES, dict['start_frame']) # jump to frame number spe
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
 
 # Local path to trained weights file
-COCO_MODEL_PATH = "mask_rcnn_coco.h5"
+COCO_MODEL_PATH = "mask_rcnn_cars.h5"
 frame_out =None
 
 
