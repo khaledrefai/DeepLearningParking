@@ -170,7 +170,7 @@ if parking_data != None:
         points = np.array(park['points'])
         rect = cv2.boundingRect(points)
         points_shifted = points.copy()
-        #points_shifted[:,0] = points[:,0] - rect[0] # shift contour to region of interest
+        #points_shifted[:,0] = points[:,0] - rect[0] # shift contour to reparking_areagion of interest
         #points_shifted[:,1] = points[:,1] - rect[1]
         parking_contours.append(points)
         parking_bounding_rects.append(rect)
